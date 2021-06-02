@@ -22,6 +22,7 @@ Measurement = Base.classes.measurement
 Station = Base.classes.station
 
 ################################
+#start session
 session = Session(engine)
 
 # find the last date in the database
@@ -30,13 +31,15 @@ last_date = session.query(Measurement.date).order_by(Measurement.date.desc()).fi
 # Calculate the date 1 year ago from the last data point in the database
 yr_prior = dt.date(2017,8,23) - dt.timedelta(days=365)
 
+#close session
 session.close()
+
+
 ################################
 
 # Create an app
 app = Flask(__name__)
 
-################################
 # Flask Routes
 
 @app.route("/")
@@ -62,7 +65,7 @@ def home():
         f"/api/v1.0/min_max_avg/&lt;start date&gt;/&lt;end date&gt;<br/>"
         
     )
-###########################################################
+
 
 # `/api/v1.0/precipitation` -Convert the query results to a dictionary using `date` as the key and `prcp` as the value.
 
