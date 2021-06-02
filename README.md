@@ -1,4 +1,4 @@
-# sqlalchemy_challenge
+# SQLALCHEMY CHALLENGE
 
 ![surfs-up.png](Images/surfs-up.png)
 
@@ -16,48 +16,32 @@ Congratulations! You've decided to treat yourself to a long holiday vacation in 
 
 -Working backwards, we found the date a year prior to this query and pulled the year's worth of precipitation data.
 
--A data frame using only the date and precipitation values was created.
+-A data frame using only the date and precipitation values was created and the index was set to the date column.
+
+-This data was used to create a bar chart seen below:
+
+![precip](https://user-images.githubusercontent.com/77282780/120549474-a6d4cb00-c3c1-11eb-9ee5-045646a72da2.png)
+
+-Pandas was used to print summary statistics for this data
+
 
 * **Important** Don't forget to close out your session at the end of your notebook.
 
 
-* Select only the `date` and `prcp` values.
-
-* Load the query results into a Pandas DataFrame and set the index to the date column.
-
-* Sort the DataFrame values by `date`.
-
-* Plot the results using the DataFrame `plot` method.
-
-  ![precipitation](Images/precipitation.png)
-
-* Use Pandas to print the summary statistics for the precipitation data.
-
 ### Station Analysis
 
-* Design a query to calculate the total number of stations in the dataset.
+-We created a query to calculate the total number of stations in the dataset.
 
-* Design a query to find the most active stations (i.e. which stations have the most rows?).
+-From here we found the most active station and listed them and the number of observations at each in descending order.
 
-  * List the stations and observation counts in descending order.
+-For the most active station in the data, we found the maximum, mimimum, and average temperature.
 
-  * Which station id has the highest number of observations?
+-A query was designed to pull the last 12 months of temperatures observed (TOBS) and a histogram was created:
 
-  * Using the most active station id, calculate the lowest, highest, and average temperature.
+![TOBS](https://user-images.githubusercontent.com/77282780/120550277-a557d280-c3c2-11eb-8db7-7d95443c4950.png)
 
-  * Hint: You will need to use a function such as `func.min`, `func.max`, `func.avg`, and `func.count` in your queries.
 
-* Design a query to retrieve the last 12 months of temperature observation data (TOBS).
-
-  * Filter by the station with the highest number of observations.
-
-  * Query the last 12 months of temperature observation data for this station.
-
-  * Plot the results as a histogram with `bins=12`.
-
-    ![station-histogram](Images/station-histogram.png)
-
-* Close out your session.
+-The session was closed.
 
 - - -
 
