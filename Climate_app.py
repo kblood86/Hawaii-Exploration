@@ -43,7 +43,7 @@ app = Flask(__name__)
 def home():
      #List all routes that are available.
     return(
-        f"Welcome to SQL Alchemy Hawaii Dataset!<br/> "
+        f"Welcome to SQL Alchemy Hawaii Dataset<br/> "
         f"Available Routes:<br/>"
         f"<br/>"  
         f"Precipitation:<br/>"
@@ -55,10 +55,10 @@ def home():
         f"Observed Temperatures from Most Active Station:<br/>"
         f"/api/v1.0/tobs<br/>"
         f"<br/>"
-        f"Minimum, maxiumum, and average temperatures for chosen date: (please use 'yyyy-mm-dd' format):<br/>"
+        f"Minimum, maxiumum, and average temperatures for chosen date: ('yyyy-mm-dd' format):<br/>"
         f"/api/v1.0/min_max_avg/&lt;start date&gt;<br/>"
         f"<br/>"
-        f"Minimum, maxiumum, and average temperatures for chosen date range: (please use 'yyyy-mm-dd'/'yyyy-mm-dd' format for start and end values):<br/>"
+        f"Minimum, maxiumum, and average temperatures for chosen date range: ('yyyy-mm-dd' format):<br/>"
         f"/api/v1.0/min_max_avg/&lt;start date&gt;/&lt;end date&gt;<br/>"
         
     )
