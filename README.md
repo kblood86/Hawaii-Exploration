@@ -1,4 +1,4 @@
-# SQLALCHEMY CHALLENGE
+# Hawaii Exploration
 
 ![surfs-up.png](Images/surfs-up.png)
 
